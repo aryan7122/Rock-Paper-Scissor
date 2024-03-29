@@ -54,4 +54,13 @@
         width: 300px !important;
         margin: 0 auto;
     }
+
+    .home_main_box .buttons {
+        gap: 30px;
+    }
+
+    iframe {
+        width: 270px;
+        height: 150px;
+    }
 }
