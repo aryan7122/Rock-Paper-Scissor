@@ -57,8 +57,8 @@ const ComputerPlay = () => {
                     <div id='hand_to'>
                         <div id='left_hand'>
                             <h1>{randomLeftHand}</h1>
-                            <p>Computer</p>
-                            <p>won</p>
+                            {/* <p>Computer</p>
+                            <p>won</p> */}
                         </div>
                         <div id='right_hand'>
                             <h1>{randomRightHand}</h1>
