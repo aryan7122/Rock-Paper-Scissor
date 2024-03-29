@@ -168,4 +168,9 @@
         font-size: 2rem;
     }
 
+    .home_main_box .title_gif h1 {
+        color: #a7a7a7;
+        text-shadow: 0px 0px 20px black;
+    }
+
 }
