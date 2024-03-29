@@ -6,7 +6,8 @@ const ComputerPlay = () => {
     const [playAgain, setPlayAgain] = useState()
     const [playAgain2, setPlayAgain2] = useState()
     // const [won, setWon] = useState()
-    const [winner, setWinner] = useState()
+    const [winner, setWinner] = useState('')
+    console.log(winner)
 
     const handlePlayButtonClick = () => {
         setShowHowToPlay(false);
@@ -25,13 +26,12 @@ const ComputerPlay = () => {
         setPlayAgain2(getRandomIndex())
     }
 
-    // console.log('-------', '🤜🏻' === '🤛🏻')false
 
     const randomLeftHand = left_hand[playAgain];
     const randomRightHand = right_hand[playAgain2];
 
     useEffect(() => {
-        if ((randomLeftHand === randomRightHand) || (randomLeftHand === '🤜🏻' && randomRightHand === '🤛🏻') || (randomLeftHand === '🫱🏻' && randomRightHand === '🫲🏻')) {
+        if ( (randomLeftHand === '🤜🏻' && randomRightHand === '🤛🏻') || (randomLeftHand === '🫱🏻' && randomRightHand === '🫲🏻') || (randomLeftHand === '✌🏻' && randomRightHand === '✌🏻')) {
             setWinner(' It\'s a tie!');
         } else if (
             (randomLeftHand === '🫱🏻' && randomRightHand === '✌🏻') || (randomLeftHand === '✌🏻' && randomRightHand === '🤛🏻') || (randomLeftHand === '🤜🏻' && randomRightHand === '🫲🏻') ||
@@ -52,7 +52,7 @@ const ComputerPlay = () => {
             {showHowToPlay && (
                 <>
                     <div>
-                        <button onClick={handlePlayButtonClick}>Home Page</button>
+                        <button onClick={handlePlayButtonClick}>Back to Game</button>
                     </div>
                     <div id='hand_to'>
                         <div id='left_hand'>
@@ -66,7 +66,7 @@ const ComputerPlay = () => {
                             <p>Lose</p>
                         </div>
                     </div>
-                    <h1>{winner}</h1>
+                    <h1>{winner === '' ? 'Chalo Suru Kare' : `${winner}`}</h1>
                     <button onClick={againPlay}> play</button>
                 </>
             )}

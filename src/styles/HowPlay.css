@@ -99,3 +99,62 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
+
+
+@media(max-width:1000px) {
+    .home_main_box .title_gif h1 {
+        font-size: 3rem;
+    }
+
+    .home_main_box .buttons {
+        width: 600px;
+    }
+
+    .home_main_box .buttons {
+        flex-direction: column;
+    }
+
+    .how_to_play_main .text_guidance {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .how_to_play_main .text_guidance .right {
+        width: 90%;
+    }
+}
+
+@media (max-width:700px) {
+    #hand_to {
+        /* grid-template-columns: repeat(1, 1fr); */
+        width: 95%;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #right_hand {
+        font-size: 3rem;
+        text-align: end;
+    }
+
+    #left_hand {
+        width: 3rem;
+    }
+
+    .how_to_play_main .text_guidance .left {
+        width: 97%;
+    }
+}
+
+@media (max-width:400px) {
+    .home_main_box .title_gif h1 {
+        font-size: 2rem;
+    }
+
+    .how_to_play_main .text_guidance .left img {
+        width: 290px;
+    }
+}

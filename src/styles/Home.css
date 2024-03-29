@@ -48,3 +48,10 @@
     font-size: 1.3rem;
     box-shadow: 0px 0px 10px 0.1px #01c625bb;
 }
+
+@media (max-width:650px) {
+    .home_main_box .buttons {
+        width: 300px !important;
+        margin: 0 auto;
+    }
+}
