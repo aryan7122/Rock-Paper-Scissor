@@ -60,7 +60,7 @@ const ComputerPlay = () => {
             {showHowToPlay && (
                 <>
                     <div>
-                        <button onClick={handlePlayButtonClick}>Out of the Game</button>
+                        <button onClick={handlePlayButtonClick} id='top_btn'>Out of the Game</button>
                     </div>
                     <div id='hand_to'>
                         <div id='left_hand'>
