@@ -15,15 +15,23 @@ const ComputerPlay = () => {
 
 
     const left_hand = ['✌🏻', '🤜🏻', '🫱🏻', '🤜🏻', '🫱🏻', '✌🏻'];
-    const right_hand = ['✌🏻', '🤛🏻', '🫲🏻', '✌🏻', '🤛🏻', '🫲🏻'];
+    const right_hand = ['🤛🏻', '🫲🏻', '✌🏻']; //'✌🏻', '🤛🏻', '🫲🏻', '✌🏻', '🤛🏻', '🫲🏻'
 
     const getRandomIndex = () => {
         return Math.floor(Math.random() * 3);
     };
 
-    const againPlay = () => {
+    const againPlay_0 = (e) => {
         setPlayAgain(getRandomIndex())
-        setPlayAgain2(getRandomIndex())
+        setPlayAgain2(0)
+    }
+    const againPlay_1 = (e) => {
+        setPlayAgain(getRandomIndex())
+        setPlayAgain2(1)
+    }
+    const againPlay_2 = (e) => {
+        setPlayAgain(getRandomIndex())
+        setPlayAgain2(2)
     }
 
 
@@ -31,7 +39,7 @@ const ComputerPlay = () => {
     const randomRightHand = right_hand[playAgain2];
 
     useEffect(() => {
-        if ( (randomLeftHand === '🤜🏻' && randomRightHand === '🤛🏻') || (randomLeftHand === '🫱🏻' && randomRightHand === '🫲🏻') || (randomLeftHand === '✌🏻' && randomRightHand === '✌🏻')) {
+        if ((randomLeftHand === '🤜🏻' && randomRightHand === '🤛🏻') || (randomLeftHand === '🫱🏻' && randomRightHand === '🫲🏻') || (randomLeftHand === '✌🏻' && randomRightHand === '✌🏻')) {
             setWinner(' It\'s a tie!');
         } else if (
             (randomLeftHand === '🫱🏻' && randomRightHand === '✌🏻') || (randomLeftHand === '✌🏻' && randomRightHand === '🤛🏻') || (randomLeftHand === '🤜🏻' && randomRightHand === '🫲🏻') ||
@@ -67,7 +75,15 @@ const ComputerPlay = () => {
                         </div>
                     </div>
                     <h1>{winner === '' ? 'Chalo Suru Kare' : `${winner}`}</h1>
-                    <button onClick={againPlay}> play</button>
+                    <button onClick={againPlay_0} id='0'>
+                        🤛🏻
+                    </button>
+                    <button onClick={againPlay_1} id='1'>
+                        🫲🏻
+                    </button>
+                    <button onClick={againPlay_2} id='2'>
+                        ✌🏻
+                    </button>
                 </>
             )}
         </div>

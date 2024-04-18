@@ -18,7 +18,7 @@
 .how_to_play_main button {
     margin-top: 20px;
     border: none;
-    width: 180px;
+    min-width: 100px;
     padding: 10px;
     border-radius: 10px;
     background: #000;
@@ -27,6 +27,7 @@
     box-shadow: 0px 0px 10px 0.1px #ffffff50;
     cursor: pointer;
     transition: linear 0.2s;
+    margin: 5px;
 }
 
 .how_to_play_main button:hover {
