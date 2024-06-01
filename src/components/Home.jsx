@@ -39,7 +39,7 @@ const Home = () => {
                 <img src="https://media1.giphy.com/media/jqI3buvbN3EitBjHfB/giphy.gif" alt="" />
             </div>
             <div className='buttons'>
-                <button onClick={handleHowToPlayButtonClick}>{showHowToPlay ? "Again Guide Me" : "How to Play"}</button>
+                {/*<button onClick={handleHowToPlayButtonClick}>{showHowToPlay ? "Again Guide Me" : "How to Play"}</button>*/}
                 <button onClick={PlayComputerButtonClick}>{playComputer ? "Again Play With Computer" : "Play With Computer"}</button>
                 {/* <button onClick={FriendPlayButtonClick}>{playComputer ? "Again Play With Friend" : "Play With Friend"}</button> */}
             </div>
